@@ -34,7 +34,7 @@ export default function Internship() {
                 logo: sduLogo,
                 logoClass: "sdu-logo"
             },
-            period: "2024.11 - 2025.08",
+            period: "2024.11 - 2025.11",
             role: "Research Assistant (Part-time)",
             location: "Weihai, China",
             projects: [
