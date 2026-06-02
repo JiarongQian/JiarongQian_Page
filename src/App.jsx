@@ -11,6 +11,7 @@ import News from "./components/News.jsx";
 import SelectedAwards from "./components/SelectedAwards.jsx";
 import Education from "./components/Education.jsx";
 import More from "./components/More.jsx";
+import Visitor from "./components/Visitor.jsx";
 import { useEffect } from "react";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                         <SelectedAwards />
                         <More />
                     </div>
+                    <Visitor />
                 </div>
             </div>
             {/*<Footer />*/}

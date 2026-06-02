@@ -241,3 +241,20 @@ strong{
     font-family: "Georgia", "Times New Roman", serif;
     font-style: italic;
 }
+
+.visitor-map-container {
+    margin: 2rem auto 1rem;
+    text-align: center;
+}
+
+.visitor-map-container a.mapmyvisitors-map-control {
+    color: #7c3aed;
+    font-size: 0.75rem;
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.visitor-map-container a.mapmyvisitors-map-control:hover {
+    text-decoration: underline;
+}

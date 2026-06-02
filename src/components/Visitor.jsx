@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+// Register at https://mapmyvisitors.com/ and replace with your tracker id (the `d=` param).
+const MAPMYVISITORS_TRACKER_ID =
+    import.meta.env.VITE_MAPMYVISITORS_TRACKER_ID || 'ltd73CyIV7t_kxjcJMTKz-L0vmQL2zhyM_ipGcOEeyA';
+
 export default function Visitor() {
 
     const mapContainerRef = useRef(null);
@@ -46,7 +50,7 @@ export default function Visitor() {
         script.id = 'mapmyvisitors';
 
         // C. 动态构建 src，使用我们测量到的 containerWidth
-        script.src = `https://mapmyvisitors.com/map.js?cl=eee&w=${containerWidth}&t=tt&d=ltd73CyIV7t_kxjcJMTKz-L0vmQL2zhyM_ipGcOEeyA&co=ffffff&cmo=ffbed2&cmn=f42e7a&ct=acacac`;
+        script.src = `https://mapmyvisitors.com/map.js?cl=eee&w=${containerWidth}&t=tt&d=${MAPMYVISITORS_TRACKER_ID}&co=ffffff&cmo=e9d5ff&cmn=7c3aed&ct=acacac`;
         script.async = true;
 
         // D. 注入新脚本
