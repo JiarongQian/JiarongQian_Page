@@ -89,7 +89,7 @@ const publications = [
         authors: [
             { name: "Yunhong He", role: "first" },
             { name: "Kai Zhang" },
-            { name: "Jiarong Qian", role: "advisor" },
+            { name: "Jiarong Qian" },
             { name: "Zhengqing Yuan" },
             { name: "Yanfang Ye" },
             { name: "Jing Huang" },
