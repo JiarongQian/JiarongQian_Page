@@ -6,7 +6,7 @@ export default function Education() {
         {
             university: "Shandong University (Weihai)",
             degree: "Undergraduate Student in Communication Engineering",
-            period: "2022.09 - Present",
+            period: "2022.09-2026.06",
             location: "Weihai, China",
             courses: [
                 { name: "Advanced Mathematics", grade: 99 },

@@ -29,7 +29,7 @@ function Hero() {
                     <div className="meta-name">Jiarong Qian </div>
 
                     <div className="meta-description">
-                        <div> 👩‍💻Undergraduate Student</div>
+                        <div> 👩‍💻First-Year PhD Student</div>
                         <div> 🔬AI For Healthcare & Science</div>
                     </div>
                     <div className="meta-link">

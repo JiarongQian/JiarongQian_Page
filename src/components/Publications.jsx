@@ -39,6 +39,7 @@ import lifeeling_img from "../assets/paper_image/lifeeling.png";
 import carbon_img from "../assets/paper_image/carbon.png";
 import complexity_paradox_img from "../assets/paper_image/complexity_paradox_gpt5.png";
 import samla_clip_framework_img from "../assets/paper_image/samla_clip_framework.png";
+import medjudge_img from "../assets/paper_image/medjudge_framework.png";
 
 
 import clay_video from "../assets/video/clay.mp4";
@@ -81,6 +82,29 @@ const publications = [
         tags: ["Selected", "Medical AI", "Multimodal Diagnosis", "LLM Agents", "Clinical Evaluation"],
     },
     {
+        id: "medjudge-medical-multimodal-reward-modeling",
+        year: 2026,
+        title: "MedJudge: Medical Multimodal Reward Modeling",
+        abstract: "As large multimodal models (LMMs) become increasingly integrated into clinical workflows, robust evaluation and alignment mechanisms are critical to ensure their reliability in decision support. Existing reward models (RMs) typically reduce preference supervision to scalar scores, limiting transparency and diagnostic insight. In this work, we introduce MedJudge, a multimodal medical reward modeling method that supports interpretable, evidence-grounded, and clinically-aligned decision evaluation. Given a clinical query (text and image) and candidate responses, MedJudge outputs both strict pairwise preferences and concise rationales, enabling transparent verification and inference-time reranking. To overcome the lack of high-quality supervision data, we construct a large-scale synthetic dataset with five complementary generation heuristics, and compare three training paradigms—scalar (BT), supervised (SFT), and reasoning-augmented SFT (SFT+Rea)—across 10 open-source models. Our comprehensive experiments show that while all methods improve over baseline, SFT+Rea provides comparable accuracy with richer explanations, and BT achieves the strongest overall performance. Beyond decision accuracy, we propose UMLS-based Concept Overlap (UCO) to evaluate explanation quality, measuring concept-level alignment with clinician expectations. Compared to BERTScore, UCO better reflects human preferences across multiple statistical tests. We further show that our BT-trained judges improve Best-of-4 answer selection by up to 2.75%, demonstrating practical utility in clinical inference-time decision reranking. Our results establish MedJudge as an effective, interpretable, and clinically grounded framework for multimodal medical reward modeling and evaluation.",
+        authors: [
+            { name: "Yunhong He", role: "first" },
+            { name: "Kai Zhang" },
+            { name: "Jiarong Qian", role: "advisor" },
+            { name: "Zhengqing Yuan" },
+            { name: "Yanfang Ye" },
+            { name: "Jing Huang" },
+            { name: "Lichao Sun", role: "first" },
+        ],
+        venues: [
+            { name: "KDD 2026 (Accepted)", type: "conference" },
+        ],
+        links: {
+            msg: "* Equal contribution",
+        },
+        image: medjudge_img,
+        tags: ["Selected", "Medical AI", "Reward Modeling", "Multimodal"],
+    },
+    {
         id: "llms-samed-few-shot-pulmonary-nodule",
         year: 2026,
         title: "Leveraging LLMs and SAMed for Synergistic Prompt Learning in Few-Shot Pulmonary Nodule Subtype Classification",
@@ -97,7 +121,7 @@ const publications = [
             { name: "Peng Xue", role: "corresponding" },
         ],
         venues: [
-            { name: "AIIM (With Editor)", type: "journal" },
+            { name: "AIIM (Under Review)", type: "journal" },
         ],
         links: {
             msg: "",

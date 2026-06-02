@@ -4,12 +4,8 @@ import "../css/All.css"
 function News() {
     const news =[
         {
-            time: "2026.03",
-            content: <>Submitted a co-authored paper with Yunhong to <span style={{ fontWeight: 700, color: "#000" }}>COLM 2026</span>.</>
-        },
-        {
-            time: "2026.02",
-            content: <>Submitted a first-authored paper to <span style={{ fontWeight: 700, color: "#000" }}>MICCAI 2026</span> under the guidance of Dr. Peng Xue and Dr. Lei Ma.</>
+            time: "2026.06",
+            content: <>My first-authored paper was accepted to <span style={{ fontWeight: 700, color: "#000" }}>AMIA 2026</span> as an <span style={{ fontWeight: 700, color: "#000" }}>oral presentation</span>.</>
         },
     ]
 
