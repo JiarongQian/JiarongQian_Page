@@ -15,7 +15,7 @@ export default function Visitor() {
         const script = document.createElement('script');
         script.type = 'text/javascript';
         script.id = 'mapmyvisitors';
-        script.src = `https://mapmyvisitors.com/map.js?cl=ffffff&w=a&t=n&d=${MAPMYVISITORS_TRACKER_ID}&co=cbe3ff&cmo=d4a8ff&cmn=fa9bea`;
+        script.src = `https://mapmyvisitors.com/map.js?cl=ebebeb&w=a&t=n&d=${MAPMYVISITORS_TRACKER_ID}&co=ffffff&cmo=d4a8ff&cmn=fa9bea`;
         script.async = true;
 
         container.appendChild(script);
