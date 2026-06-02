@@ -93,13 +93,13 @@ const publications = [
             { name: "Zhengqing Yuan" },
             { name: "Yanfang Ye" },
             { name: "Jing Huang" },
-            { name: "Lichao Sun", role: "first" },
+            { name: "Lichao Sun", role: "corresponding" },
         ],
         venues: [
             { name: "KDD 2026 (Accepted)", type: "conference" },
         ],
         links: {
-            msg: "* Equal contribution",
+            msg: "",
         },
         image: medjudge_img,
         tags: ["Selected", "Medical AI", "Reward Modeling", "Multimodal"],
