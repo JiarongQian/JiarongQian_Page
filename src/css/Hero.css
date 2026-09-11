@@ -1,5 +1,6 @@
 .profile-pic{
     width: 62%;
+    aspect-ratio: 1;
     margin-bottom: 0.75rem;
     border-radius: 50%;
     object-fit: cover;
