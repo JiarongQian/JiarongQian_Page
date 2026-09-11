@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
+import sallyMasonPreview from "../assets/sally-mason-muted-spring.jpg";
 import "../css/Others.css";
 
 const SALLY_MASON_COLLECTIONS = "https://www.sallymasonphotography.com/collections";
-const SALLY_MASON_IMAGE = "https://images.squarespace-cdn.com/content/v1/621382a20d1d47709c902d43/0743a4f6-0fed-4c6a-9d56-6d4511a7f822/Sally%2BMason%2BCover%2Bv3%2Bcopy.jpeg";
+const SALLY_MASON_POST = "https://www.instagram.com/p/DcX9L3AszrG/";
 
 export default function Others() {
     useEffect(() => {
@@ -30,14 +31,14 @@ export default function Others() {
                 <article className="artist-feature">
                     <a
                         className="artist-image-link"
-                        href={SALLY_MASON_COLLECTIONS}
+                        href={SALLY_MASON_POST}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Explore Sally Mason's photography collections"
+                        aria-label="View Muted Spring by Sally Mason on Instagram"
                     >
                         <img
-                            src={SALLY_MASON_IMAGE}
-                            alt="Stillness in Motion by landscape photographer Sally Mason"
+                            src={sallyMasonPreview}
+                            alt="Muted Spring, a floral photograph by Sally Mason"
                         />
                     </a>
 
@@ -57,7 +58,9 @@ export default function Others() {
                             Explore collections
                             <ArrowUpRight size={17} aria-hidden="true" />
                         </a>
-                        <div className="artist-credit">Image and work © Sally Mason</div>
+                        <div className="artist-credit">
+                            Muted Spring · Image and work © Sally Mason
+                        </div>
                     </div>
                 </article>
             </section>
