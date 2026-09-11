@@ -12,35 +12,75 @@ import SelectedAwards from "./components/SelectedAwards.jsx";
 import Education from "./components/Education.jsx";
 import More from "./components/More.jsx";
 import Visitor from "./components/Visitor.jsx";
+import Others from "./components/Others.jsx";
 import { useEffect } from "react";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 
-function App() {
+function PageLayout({ children, className = "" }) {
+    return (
+        <div className={`main-layout ${className}`}>
+            <div className="left-hero">
+                <Hero />
+            </div>
+            <div className="right-content">
+                {children}
+            </div>
+        </div>
+    );
+}
+
+function HomePage() {
+    const location = useLocation();
 
     useEffect(() => {
-        window.gtag && window.gtag("config", "G-F053REKZP6", {
+        if (!location.state?.scrollTo) return;
+
+        const frame = window.requestAnimationFrame(() => {
+            document.getElementById(location.state.scrollTo)?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
         });
+
+        return () => window.cancelAnimationFrame(frame);
+    }, [location.state]);
+
+    return (
+        <PageLayout>
+            <div style={{margin: "2rem"}}>
+                <About />
+                <News />
+                <Publications />
+                <Internship />
+                <Education />
+                <SelectedAwards />
+                <More />
+            </div>
+            <Visitor />
+        </PageLayout>
+    );
+}
+
+function App() {
+    useEffect(() => {
+        window.gtag && window.gtag("config", "G-F053REKZP6", {});
     }, []);
 
     return (
         <div className="App">
             <Header />
-            <div className="main-layout">
-                <div className="left-hero">
-                    <Hero />
-                </div>
-                <div className="right-content">
-                    <div style={{margin: "2rem"}}>
-                        <About />
-                        <News />
-                        <Publications />
-                        <Internship />
-                        <Education />
-                        <SelectedAwards />
-                        <More />
-                    </div>
-                    <Visitor />
-                </div>
-            </div>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route
+                    path="/others"
+                    element={
+                        <PageLayout className="others-layout">
+                            <Others />
+                        </PageLayout>
+                    }
+                />
+                <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
             {/*<Footer />*/}
         </div>
     );

@@ -86,6 +86,10 @@
     color: #7c3aed;
 }
 
+.header-nav .nav-item.active {
+    color: #7c3aed;
+}
+
 .header-nav .nav-item:focus {
     outline: none;
     color: #7c3aed;
@@ -102,7 +106,8 @@
     margin-top: 3px;
 }
 
-.header-nav .nav-item:hover::after {
+.header-nav .nav-item:hover::after,
+.header-nav .nav-item.active::after {
     width: 100%;
 }
 

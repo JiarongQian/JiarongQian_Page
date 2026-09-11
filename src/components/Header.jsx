@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/Header.css";
 import logo from "../assets/logo.png";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const NAV = [
     { id: "about", label: "About" },
@@ -10,15 +11,32 @@ const NAV = [
     { id: "education", label: "Education" },
     { id: "awards", label: "Awards" },
     { id: "more", label: "More" },
+    { id: "others", label: "Others", page: true },
 ];
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
-    const handleClick = (id) => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    const handleClick = (item) => {
         setMenuOpen(false);
+
+        if (item.page) {
+            navigate("/others");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            return;
+        }
+
+        if (location.pathname !== "/") {
+            navigate("/", { state: { scrollTo: item.id } });
+            return;
+        }
+
+        document.getElementById(item.id)?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
     };
 
     return (
@@ -46,8 +64,9 @@ export default function Header() {
                     {NAV.map((item) => (
                         <button
                             key={item.id}
-                            className="nav-item"
-                            onClick={() => handleClick(item.id)}
+                            className={`nav-item ${item.page && location.pathname === "/others" ? "active" : ""}`}
+                            onClick={() => handleClick(item)}
+                            aria-current={item.page && location.pathname === "/others" ? "page" : undefined}
                         >
                             {item.label}
                         </button>

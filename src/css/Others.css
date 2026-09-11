@@ -1,0 +1,202 @@
+.others-layout .right-content {
+    min-height: calc(100vh - 56px);
+}
+
+.others-page {
+    width: min(100% - 4rem, 940px);
+    margin: 0 auto;
+    padding: clamp(3.5rem, 8vw, 7rem) 0 5rem;
+}
+
+.others-intro {
+    position: static;
+    width: auto;
+    height: auto;
+    text-align: left;
+    max-width: 760px;
+    margin-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.others-kicker {
+    color: #a78bfa;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.65rem;
+}
+
+.others-intro h1 {
+    color: #242424;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(3.5rem, 8vw, 6.6rem);
+    font-weight: 500;
+    letter-spacing: -0.055em;
+    line-height: 0.95;
+    margin: 0;
+}
+
+.others-intro p {
+    color: #666;
+    font-family: "Playfair Display", "Noto Serif SC", Georgia, serif;
+    font-size: clamp(1.05rem, 2vw, 1.32rem);
+    line-height: 1.8;
+    margin: 1.5rem 0 0;
+}
+
+.others-section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    border-bottom: 1px solid #e8e5ef;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.7rem;
+}
+
+.others-section-heading span {
+    color: #a78bfa;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+.others-section-heading h2 {
+    color: #242424;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.artist-feature {
+    background: #f8f7fb;
+    border: 1px solid #e8e5ef;
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(250px, 0.8fr);
+    min-height: 390px;
+    overflow: hidden;
+}
+
+.artist-image-link {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.artist-image-link img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    object-fit: cover;
+    transition: transform 700ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.artist-image-link:hover img {
+    transform: scale(1.025);
+}
+
+.artist-copy {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.8rem, 4vw, 3rem);
+}
+
+.artist-meta {
+    color: #8b7bb5;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.artist-copy h3 {
+    color: #242424;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
+    line-height: 1.05;
+    margin: 0.85rem 0 1.1rem;
+}
+
+.artist-copy p {
+    color: #666;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.92rem;
+    line-height: 1.75;
+    margin: 0 0 1.7rem;
+}
+
+.artist-link {
+    align-items: center;
+    align-self: flex-start;
+    border-bottom: 1px solid #a78bfa;
+    color: #7c3aed;
+    display: inline-flex;
+    font-size: 0.82rem;
+    font-weight: 700;
+    gap: 0.35rem;
+    padding-bottom: 0.2rem;
+}
+
+.artist-link:hover {
+    color: #5b21b6;
+}
+
+.artist-credit {
+    color: #aaa;
+    font-size: 0.64rem;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+@media (max-width: 1180px) {
+    .artist-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-image-link img {
+        aspect-ratio: 5 / 3;
+        min-height: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .others-page {
+        width: min(100% - 2.5rem, 760px);
+        padding-top: 3rem;
+    }
+
+    .others-intro {
+        margin-bottom: 3.5rem;
+    }
+
+    .artist-feature {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .others-page {
+        width: min(100% - 2rem, 760px);
+        padding: 2.5rem 0 4rem;
+    }
+
+    .others-intro h1 {
+        font-size: 3.4rem;
+    }
+
+    .artist-image-link img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .artist-copy {
+        padding: 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .artist-image-link img {
+        transition: none;
+    }
+}
