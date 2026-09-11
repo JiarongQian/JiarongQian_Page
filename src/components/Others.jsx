@@ -15,8 +15,9 @@ export default function Others() {
             <header className="others-intro">
                 <div className="others-kicker">A personal collection</div>
                 <h1>Others</h1>
-                <p lang="zh-CN">
-                    这里是一些我很喜欢的艺术家，like 摄影师和画家，以及一些电影。
+                <p>
+                    Here are some artists I really like—including photographers and
+                    painters—as well as a few films.
                 </p>
             </header>
 
