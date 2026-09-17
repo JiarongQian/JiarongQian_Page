@@ -96,7 +96,7 @@ const publications = [
             { name: "Lichao Sun", role: "corresponding" },
         ],
         venues: [
-            { name: "KDD 2026 (Accepted)", type: "conference" },
+            { name: "KDD 2026", type: "conference" },
         ],
         links: {
             msg: "",
