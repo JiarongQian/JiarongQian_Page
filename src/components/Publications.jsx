@@ -73,7 +73,7 @@ const publications = [
             { name: "Jing Huang", role: "corresponding" },
         ],
         venues: [
-            { name: "npj Digital Medicine (accepted pending revision)", type: "journal" },
+            { name: "npj Digital Medicine", type: "journal" },
         ],
         links: {
             msg: "* Co-first authors",
