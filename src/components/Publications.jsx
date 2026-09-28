@@ -40,6 +40,7 @@ import carbon_img from "../assets/paper_image/carbon.png";
 import complexity_paradox_img from "../assets/paper_image/complexity_paradox_gpt5.png";
 import samla_clip_framework_img from "../assets/paper_image/samla_clip_framework.png";
 import medjudge_img from "../assets/paper_image/medjudge_framework.png";
+import amia_entropy_img from "../assets/paper_image/amia_entropy.png";
 
 
 import clay_video from "../assets/video/clay.mp4";
@@ -80,6 +81,24 @@ const publications = [
         },
         image: complexity_paradox_img,
         tags: ["Selected", "Medical AI", "Multimodal Diagnosis", "LLM Agents", "Clinical Evaluation"],
+    },
+    {
+        id: "when-models-hesitate-token-entropy",
+        year: 2026,
+        title: "When Models Hesitate: Using High Token Entropy for Auditing Evidence-Grounded Health Reasoning in Long Contexts",
+        abstract: "In evidence-grounded health QA, large language models must avoid unsupported text generation. While rubric-style evaluations identify post-hoc errors, they struggle to localize where error decisions emerge during generation. To address this, we propose a token-entropy auditing framework to pinpoint these possible errors. Using 103 CL-Bench healthcare cases, we extracted high-entropy peak spans from reasoning traces, assigning them interpretable fork types via an LLM-as-judge pipeline. We found that high-entropy mass concentrates in commitment and discourse regions rather than lexical completion. Notably, failing cases disproportionately allocate entropy to directive/action forks, whereas passing cases focus on attribution/coverage. Entropy features yield modest predictive discrimination for fatal failures (AUC 0.605) compared to a chance-level shuffled control (AUC 0.472), confirming non-random failure signals. Ultimately, token-level entropy serves as a practical diagnostic tool, suggesting a targeted alignment paradigm: focusing reinforcement learning on high-entropy decision nodes to improve medical evidence grounding.",
+        authors: [
+            { name: "Jiarong Qian" },
+            { name: "Jing Huang" },
+        ],
+        venues: [
+            { name: "AMIA 2026", type: "conference" },
+        ],
+        links: {
+            msg: "",
+        },
+        image: amia_entropy_img,
+        tags: ["Selected", "Oral Presentation", "Medical AI", "Health QA", "LLM Auditing"],
     },
     {
         id: "medjudge-medical-multimodal-reward-modeling",
