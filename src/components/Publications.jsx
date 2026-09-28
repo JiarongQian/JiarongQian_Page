@@ -80,7 +80,7 @@ const publications = [
             msg: "* Co-first authors",
         },
         image: complexity_paradox_img,
-        tags: ["Selected", "Medical AI", "Multimodal Diagnosis", "LLM Agents", "Clinical Evaluation"],
+        tags: ["Medical AI", "Multimodal Diagnosis", "LLM Agents", "Clinical Evaluation"],
     },
     {
         id: "when-models-hesitate-token-entropy",
@@ -93,12 +93,13 @@ const publications = [
         ],
         venues: [
             { name: "AMIA 2026", type: "conference" },
+            { name: "Oral Presentation", type: "conference" },
         ],
         links: {
             msg: "",
         },
         image: amia_entropy_img,
-        tags: ["Selected", "Oral Presentation", "Medical AI", "Health QA", "LLM Auditing"],
+        tags: ["Medical AI", "Health QA", "LLM Auditing"],
     },
     {
         id: "medjudge-medical-multimodal-reward-modeling",
@@ -121,7 +122,7 @@ const publications = [
             msg: "",
         },
         image: medjudge_img,
-        tags: ["Selected", "Medical AI", "Reward Modeling", "Multimodal"],
+        tags: ["Medical AI", "Reward Modeling", "Multimodal"],
     },
     {
         id: "llms-samed-few-shot-pulmonary-nodule",
@@ -146,7 +147,7 @@ const publications = [
             msg: "",
         },
         image: samla_clip_framework_img,
-        tags: ["Selected", "Medical AI"],
+        tags: ["Medical AI"],
     },
 ];
 
